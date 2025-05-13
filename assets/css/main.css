@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import 'animate.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+  }
+
+  @font-face {
+    font-family: 'Dashiell Fine Black';
+    src: url('/fonts/DashiellFineBlack.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Firs Neue Bold';
+    src: url('/public/fonts/TTFirsNeueDemiBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+
+
+
+@layer utilities {
+  .bg-custom-pink {
+    background-color: #f6d2c4;
+  }
+
+  .font-dashiell {
+    font-family: 'Dashiell Fine Black', serif;
+  }
+
+  .font-ttfirst {
+    font-family: 'TT Firs Neue Bold', serif;
+  }
+
+  .text-ecosmos-green {
+    color: #336d5e;
+  }
+
+}
+
