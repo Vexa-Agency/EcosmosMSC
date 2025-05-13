@@ -23,23 +23,23 @@
         <h2 class="text-xl sm:text-2xl font-bold mb-4">Lier votre MSC</h2>
 
         <label class="block text-sm mb-2">
-          Numéro de série.
-          <NuxtLink to="/help">
-            <button class="cursor-pointer text-[#07f4bd] ml-1 text-sm underline">
-              Besoin d'aide?
-            </button>
-          </NuxtLink>
+             Numéro de série.
+              <NuxtLink to="/help" class="text-[#07f4bd] ml-1 text-sm underline cursor-pointer">
+                Besoin d'aide ?
+              </NuxtLink>
         </label>
+
 
         <input
           type="text"
           placeholder="Ex. MSC-ABCD-1234"
           class="w-full px-4 py-2 rounded bg-gray-300 text-gray-700 placeholder-gray-500 focus:outline-none mb-4"
         />
-
+        <NuxtLink to="/panel">
         <button class="bg-[#07f4bd] hover:bg-green-300 text-black font-semibold py-2 px-6 rounded w-full sm:w-auto">
           Lier
         </button>
+      </NuxtLink>
       </div>
     </div>
   </div>
