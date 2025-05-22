@@ -43,4 +43,19 @@
       </div>
     </div>
   </div>
+
+        <!-- FOOTER -->
+    <footer class="bg-[#25665a] text-white py-6 px-4">
+      <div class="flex flex-col items-center space-y-4 sm:space-y-6">
+
+        <div class="text-sm text-gray-300 text-center">
+          {{ currentYear }} – <span class="font-semibold text-white">© Ecosmos</span>
+        </div>
+      </div>
+    </footer>
 </template>
+
+
+<script setup>
+const currentYear = new Date().getFullYear()
+</script>

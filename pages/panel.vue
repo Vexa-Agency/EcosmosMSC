@@ -1,3 +1,4 @@
+
 <template>
     <div class="min-h-screen bg-white text-[#25665a] font-ttfirst p-6">
       <div class="flex justify-between items-start mb-6">
@@ -11,11 +12,13 @@
           </button>
         </div>
       </div>
-  
-      <div class="flex justify-center mb-4">
+          
+      <div >
+            <NuxtLink to="/login" class="flex justify-center mb-4">
         <img src="/assets/LogoMSC.svg" alt="Logo" class="h-12" />
+            </NuxtLink>
       </div>
-  
+           
       <div class="grid grid-cols-4 gap-6">
         <!-- Humidité de l'air -->
         <div class="bg-[#25665a] text-white rounded-xl p-6 flex flex-col items-center">
