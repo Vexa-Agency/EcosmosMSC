@@ -3,25 +3,25 @@
 
     <!-- HERO -->
     <div class="h-screen w-screen bg-custom-pink flex flex-col items-center justify-center px-4 text-center">
-      <NuxtLink to="/" class="absolute top-4 left-4 sm:top-6 sm:left-6 animate__animated animate__backInDown">
+      <NuxtLink to="/" class="absolute top-4 left-4 sm:top-6 sm:left-6">
         <img src="/assets/LogoMSC.svg" alt="Logo" class="h-12" />
       </NuxtLink>
 
-      <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl text-black font-dashiell text-ecosmos-green animate__animated animate__backInLeft pb-4">
+      <h1 data-aos="fade-up" class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl text-black font-dashiell text-ecosmos-green pb-4">
         Ecosmos
       </h1>
 
-      <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black font-ttfirst text-ecosmos-green animate__animated animate__delay-1s animate__fadeInUp -mt-4">
+      <h2 data-aos-delay="500" data-aos="fade-up" class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black font-ttfirst text-ecosmos-green -mt-4">
         Mini-Serre Connectée
       </h2>
 
       <NuxtLink to="/login">
-        <button class="px-5 py-2 mt-8 text-1xl sm:text-3xl font-ttfirst rounded-3xl border-3 border-[#25665a] text-[#25665a] bg-[#25665a]-50 animate__animated animate__delay-2s animate__fadeIn hover:scale-105 transition duration-300">
+        <button data-aos-delay="700" data-aos="fade-up" class="px-5 py-2 mt-8 text-1xl sm:text-3xl font-ttfirst rounded-3xl border-3 border-[#25665a] text-[#25665a] bg-[#25665a]-50 hover:scale-105 transition duration-300">
           Accès Panel
         </button>
       </NuxtLink>
 
-      <button @click="scrollToInfos" class="group mt-12 text-4xl text-black font-dashiell text-ecosmos-green animate__animated animate__delay-2s animate__fadeIn cursor-pointer">
+      <button @click="scrollToInfos" class="group mt-12 text-4xl text-black font-dashiell text-ecosmos-green cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
         </svg>
@@ -127,27 +127,6 @@ const scrollToInfos = () => infos.value?.scrollIntoView({ behavior: 'smooth' })
 const scrollToEquipe = () => equipe.value?.scrollIntoView({ behavior: 'smooth' })
 const scrollToServices = () => services.value?.scrollIntoView({ behavior: 'smooth' })
 const scrollToContact = () => contact.value?.scrollIntoView({ behavior: 'smooth' })
-
-const observeSections = () => {
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const title = entry.target.querySelector('.section-title')
-        const desc = entry.target.querySelector('.section-desc')
-        title?.classList.add('animate__animated', 'animate__backInLeft')
-        desc?.classList.add('animate__animated', 'animate__fadeIn', 'animate__delay-1s')
-        obs.unobserve(entry.target)
-      }
-    })
-  }, { threshold: 0.3 })
-
-  document.querySelectorAll('.section').forEach((section) => observer.observe(section))
-}
-
-onMounted(() => {
-  window.scrollTo({ top: 0, behavior: 'auto' })
-  observeSections()
-})
 
 // Formulaire de contact
 const form = reactive({
