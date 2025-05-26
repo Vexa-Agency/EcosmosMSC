@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[url(/assets/bg-image.png)] bg-fixed">
+  <div class="bg-[url(/assets/bg-image.png)] bg-fixed w-screen">
 
     <!-- HERO -->
     <div class="h-screen w-screen bg-custom-pink flex flex-col items-center justify-center px-4 text-center">
