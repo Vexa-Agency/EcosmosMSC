@@ -102,6 +102,9 @@
           <button @click="scrollToServices" class="hover:text-gray-300">Services</button>
           <NuxtLink to="/login" class="hover:text-gray-300">Panel</NuxtLink>
           <button @click="scrollToContact" class="hover:text-gray-300">Contact</button>
+          <a href="https://docs.google.com/document/d/1eYFrSCeBfkZL5U5lBNEdc1ddvnRA7qrOJsJT5ZLcD_A/edit?usp=sharing" class="hover:text-gray-300">
+            <button>Documentation</button>
+          </a>
         </nav>
 
         <div class="text-sm text-gray-300 text-center">
